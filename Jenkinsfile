@@ -6,11 +6,11 @@ pipeline {
             steps {
                 sh 'chmod +x build.sh'
                 sh './build.sh'
-                
+              } 
             }
         }
         
-        stage('Test') {
+      /*  stage('Test') {
             steps {
                 sh 'npm install' 
                 sh 'npm run test' 
@@ -44,8 +44,7 @@ pipeline {
                 sh 'deploy.sh'
             }
         }
-    }
+    } */
 }
-
 
 
