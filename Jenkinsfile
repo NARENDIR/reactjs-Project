@@ -8,9 +8,8 @@ pipeline {
                 sh './build.sh'
               } 
             }
-        }
         
-      /*  stage('Test') {
+        stage('Test') {
             steps {
                 sh 'npm install' 
                 sh 'npm run test' 
@@ -41,10 +40,11 @@ pipeline {
         
         stage('Deploy') {
             steps {
+                 sh 'chmod +x build.sh'
                 sh 'deploy.sh'
             }
         }
-    } */
+    } 
 }
 
 
